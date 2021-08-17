@@ -27,6 +27,9 @@
     display: block;
     width: 100%;
   }
+  .nav-img{
+cursor: pointer;
+  }
 .nav-right{
   display: none;
   border-bottom: .75px solid rgb(211, 211, 211);
