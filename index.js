@@ -9,11 +9,11 @@ $(".close-burger").click(function () {
     $('.open-burger').show();
     $('.close-burger').hide();
 });
-$(".nav-right a").click(function () {
-    $(".nav-right").css('display', 'none');
-    $('.open-burger').show();
-    $('.close-burger').hide();
-});
+// $(".nav-right a").click(function () {
+//     $(".nav-right").css('display', 'none');
+//     $('.open-burger').show();
+//     $('.close-burger').hide();
+// });
 
 
 
