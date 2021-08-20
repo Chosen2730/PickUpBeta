@@ -7,153 +7,202 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mobile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+  
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/8f4571c692.js" crossorigin="anonymous"></script>
   <title>PickUpBeta Logistics</title>
+  <style>#loaderGIF{display: none}</style>
 </head>
 
 <body>
-<section class="block">
-  <section id="navigation">
+  <section class="block">
+    <section id="navigation">
 
-    <div class="navigation">
-      <div class="top-div">
-        <div class="top-div-flex">
-          <h5>Call today: <a class="call" href="tel:+2348123720722">+234 812 372 0722</a></h5>
+      <div class="navigation">
+        <div class="top-div">
+          <div class="top-div-flex">
+            <h5>Call today: <a class="call" href="tel:+2348123720722">+234 812 372 0722</a></h5>
+          </div>
+          <div class="top-div-flex top2">
+            <a href="https://web.facebook.com/Pickup-beta-101554642049216"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/pickupbeta_logistics/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/pickup_beta?s=08"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-        <div class="top-div-flex top2">
+
+        <div class="burger-flex">
+          <div class="nav-carrier">
+            <div class="nav-cont">
+              <div class="nav-left">
+                <a href="index.html"><img src="Images\pick.png" alt=""></a>
+              </div>
+            </div>
+
+            <div class="nav-cont nav-cont-right">
+              <div class="nav-right home">
+                <a href="index.html">
+                  <h5>Home</h5>
+                </a>
+              </div>
+              <div class="nav-right subscribe">
+                <a href="#">
+                  <h5><i class="fas fa-blog"></i> Blog</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="burger">
+            <i class="open-burger fas fa-bars fa-2x"></i>
+            <i class="close-burger far fa-times-circle fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    
+    <section class="order">
+      <h1>Place Order</h1>
+      <div class="order-cont-div">
+
+        <form id="pickupSchedule" name="pickupSchedule" method="POST" enctype="multipart/form-data">
+          <div class="order-cont">
+            <div class="pickup-schedule">
+              <h2>Personal Information</h2>
+              <div class="schedule-flex wow animated fadeInUp">
+                <div class="flex1"><label for="name">Name</label></div>
+                <div class="flex1"><input class="input" type="name" id="fname" name="fname" placeholder="your full name"></div>
+              </div>
+              <div class="schedule-flex wow animated fadeInUp">
+                <div class="flex1"><label for="tel">Phone Number</label></div>
+                <div class="flex1"><input class="input" id="tel" name="tel" type="tel" placeholder="+234"></div>
+              </div>
+              <div class="schedule-flex wow animated fadeInUp">
+                <div class="flex1"><label for="email">Email Address</label></div>
+                <div class="flex1"><input class="input" id="email" name="email" type="email" placeholder="example@email.com"></div>
+              </div>
+              <label for="name wow animated fadeInUp">Package Description</label><br>
+              <textarea class="input" id="packageDescription" name="packageDescription" cols="30" rows="10"></textarea><br>
+              <label for="name">Package Picture</label><br>
+              <input class="input" id="packagePicture" name="packagePicture" type="file" placeholder="upload picture">
+            </div>
+            <div class="pickup-schedule wow animated fadeInUp">
+              <h2>Pickup Schedule</h2>
+              <input type="radio" id="pickupScheduleReadyNow" name="pickupSchedule" value="Ready Now" checked>
+              <label for="pickupScheduleReadyNow">Ready Now</label>
+                <input type="radio" id="pickupScheduleLater" name="pickupSchedule" value="Schedule Later">
+              <label for="pickupScheduleLater">Schedule Later</label>
+
+              <div class="schedule-flex wow animated fadeInUp">
+                <div class="flex1"><label for="name">Pickup Date</label></div>
+                <div class="flex1"><input class="input" id="pickupDate" name="pickupDate" type="date"></div>
+              </div>
+              <div class="schedule-flex wow animated fadeInUp">
+                <div class="flex1"><label for="name">Select a Time</label></div>
+                <div class="flex1"><input class="input" id="pickupTime" name="pickupTime" type="time"></div>
+              </div>
+              <label for="name">Pickup Instruction</label><br>
+              <textarea class="input" id="pickupInstruction" name="pickupInstruction" cols="30" rows="10"></textarea><br>
+              <label for="name">Contact Address</label><br>
+              <textarea class="input" id="contactAddress" name="contactAddress" cols="30" rows="5"></textarea>
+            </div>
+
+            <div class="delivery-schedule wow animated fadeInUp">
+              <h2>Delivery Schedule</h2>
+              <input type="radio" id='deliveryScheduleReadyNow' name="deliverySchedule" value="Ready Now" checked>
+              <label for="name">Ready Now</label>
+              <input type="radio" id='deliveryScheduleLater' name="deliverySchedule" value="Schedule Later">
+              <label for="name">Schedule Later</label>
+
+              <div class="schedule-flex wow animated fadeInUp">
+                <div class="flex1"><label for="name">Delivery Date</label></div>
+                <div class="flex1"><input class="input" id="deliveryDate" name="deliveryDate" type="date"></div>
+              </div>
+              <div class="schedule-flex wow animated fadeInUp">
+                <div class="flex1"><label for="name">Select a Time</label></div>
+                <div class="flex1"><input class="input" id="deliveryTime" name="deliveryTime" type="time"></div>
+              </div>
+              <label for="name">Delivery Instruction</label><br>
+              <textarea class="input" id="deliveryInstruction" name="deliveryInstruction" cols="30" rows="10"></textarea><br>
+              <label for="name">Delivery Address</label><br>
+              <textarea class="input" id="deliveryAddress" name="deliveryAddress" cols="30" rows="5"></textarea>
+
+            </div>
+          </div>
+
+          <div>
+            <input class="subscribe wow animated fadeInUp" type="submit" value="Submit">
+            <img src="Images\kloader.gif" alt="" width=25 height=25 id="loaderGIF" style="margin-bottom: -8px; margin-left: 5px;">
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+
+
+    <section id="footer">
+      <div class="footer-div">
+        <div class="foot-icon">
           <a href="https://web.facebook.com/Pickup-beta-101554642049216"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/pickupbeta_logistics/"><i class="fab fa-instagram"></i></a>
           <a href="https://twitter.com/pickup_beta?s=08"><i class="fab fa-twitter"></i></a>
         </div>
-      </div>
-
-      <div class="burger-flex">
-        <div class="nav-carrier">
-          <div class="nav-cont">
-            <div class="nav-left">
-              <a href="index.html"><img src="Images\pick.png" alt=""></a>
-            </div>
-          </div>
-  
-          <div class="nav-cont nav-cont-right">
-            <div class="nav-right home">
-              <a href="index.html">
-                <h5>Home</h5>
-              </a>
-            </div>
-            <div class="nav-right subscribe">
-              <a href="#">
-                <h5><i class="fas fa-blog"></i> Blog</h5> 
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="burger">
-          <i class="open-burger fas fa-bars fa-2x"></i>
-          <i class="close-burger far fa-times-circle fa-2x"></i>
-        </div>
-       </div> 
+        <p>Copyright © 2021 PickUpBeta. All Rights Reserved</p>
       </div>
     </section>
-<section class="order">
-    <h1>Place Order</h1>
-    <div class="order-cont-div">
-      <form action="">
-        <div class="order-cont">
-            <div class="pickup-schedule">
-                <h2>Personal Information</h2>
-                <div class="schedule-flex wow animated fadeInUp">
-                    <div class="flex1"><label for="name">Name</label></div>
-                    <div class="flex1"><input class="input" type="name" placeholder="your full name"></div>
-                </div>
-                <div class="schedule-flex wow animated fadeInUp">
-                    <div class="flex1"><label for="tel">Phone Number</label></div>
-                    <div class="flex1"><input class="input" type="tel" placeholder="+234"></div>
-                </div>
-                <div class="schedule-flex wow animated fadeInUp">
-                    <div class="flex1"><label for="email">Email Address</label></div>
-                    <div class="flex1"><input class="input" type="email" placeholder="example@email.com"></div>
-                </div>
-                <label for="name wow animated fadeInUp">Package Description</label><br>
-                <textarea class="input" name="message" id="" cols="30" rows="10"></textarea><br>
-                <label for="name">Package Picture</label><br>
-                <input class="input" type="file" placeholder="upload picture"> 
-            </div>
-            <div class="pickup-schedule wow animated fadeInUp">
-                <h2>Pickup Schedule</h2>
-                <input type="checkbox">
-                <label for="name">Ready Now <input type="checkbox"></label>
-                
-                <label for="name">Schedule Later</label>
-                <div class="schedule-flex wow animated fadeInUp">
-                    <div class="flex1"><label for="name">Pickup Date</label></div>
-                    <div class="flex1"><input class="input" type="date"></div>
-                </div>
-                <div class="schedule-flex wow animated fadeInUp">
-                    <div class="flex1"><label for="name">Select a Time</label></div>
-                    <div class="flex1"><input class="input" type="time"></div>
-                </div>
-                <label for="name">Pickup Instruction</label><br>
-                <textarea class="input" name="message" id="" cols="30" rows="10"></textarea><br>
-                <label for="name">Contact Address</label><br>
-                    <textarea class="input" name="" id="" cols="30" rows="5"></textarea>
-            </div>
-    
-            <div class="delivery-schedule wow animated fadeInUp">
-                <h2>Delivery Schedule</h2>
-                <input type="checkbox">
-                <label for="name">Ready Now</label>
-                <input type="checkbox">
-                <label for="name">Schedule Later</label>
-                <div class="schedule-flex wow animated fadeInUp">
-                    <div class="flex1"><label for="name">Delivery Date</label></div>
-                    <div class="flex1"><input class="input" type="date"></div>
-                </div>
-                <div class="schedule-flex wow animated fadeInUp">
-                    <div class="flex1"><label for="name">Select a Time</label></div>
-                    <div class="flex1"><input class="input" type="time"></div>
-                </div>
-                <label for="name">Delivery Instruction</label><br>
-                <textarea class="input" name="message" id="" cols="30" rows="10"></textarea><br>
-                <label for="name">Delivery Address</label><br>
-                <textarea class="input" name="" id="" cols="30" rows="5"></textarea>
-            
-            </div> 
-        </div>
-        <input class="subscribe wow animated fadeInUp" type="submit" value="Submit">
-      </form>
+  </section>
+  <!-- Other contents which may not be easily seen among the major code buildup are right below. -->
+  <section id="whatsapp">
+    <div class="whatsapp">
+      <a href="https://wa.me/message/7ZHYTPP7OR5QO1"><img src="Images\whatsApp.png" alt=""></a>
     </div>
-</section>
+  </section>
+  <section class="hide-section"></section>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <script type="text/javascript">
+     // form upload
+     $('#pickupSchedule').submit(function(e){
+         e.preventDefault();
+         $('#loaderGIF').show();
+         $form = $(this)
+         var formData = new FormData(this);
+         $.ajax({
+            //  url: 'http://127.0.0.1:8000/api/',
+            url: 'https://pickuplogistics.herokuapp.com/api/',
+             type: 'POST',
+             data: formData,
+             success: function (res) {
+               console.log(res)
+               $('#loaderGIF').hide();
+             },
+             cache: false,
+             contentType: false,
+             processData: false
+         });
+     });
+     // end
+    </script>
 
 
 
-<section id="footer">
-  <div class="footer-div">
-    <div class="foot-icon">
-      <a href="https://web.facebook.com/Pickup-beta-101554642049216"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/pickupbeta_logistics/"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/pickup_beta?s=08"><i class="fab fa-twitter"></i></a>
-    </div>
-    <p>Copyright © 2021 PickUpBeta. All Rights Reserved</p>
-  </div>
-</section>
-</section>
-<!-- Other contents which may not be easily seen among the major code buildup are right below. -->
-<section id="whatsapp">
-  <div class="whatsapp">
-    <a href="https://wa.me/message/7ZHYTPP7OR5QO1"><img src="Images\whatsApp.png" alt=""></a> 
-    </div>
-</section>
-<section class="hide-section"></section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="index.js"></script>
-<script src="js/wow.min.js"></script>
-            <script>
-            new WOW().init();
-            </script>
 </body>
 
 </html>
