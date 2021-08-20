@@ -15,6 +15,17 @@
 </head>
 
 <body>
+
+  <div id="alert" style="display: none">
+    <div class="alert" style="text-align: center;">
+      <p>Your pickup schedule has been received.</p>
+      <br>
+      <input class="subscribe" type="button" value="Close" style="border-radius: 3px; padding: 5px 7px;" onclick="$('#alert').hide(); window.location = '/'">
+    </div>
+
+  </div>
+
+
   <section class="block">
     <section id="navigation">
 
@@ -192,7 +203,8 @@
              success: function (res) {
                console.log(res)
                $('#loaderGIF').hide();
-               window.location = '/'
+               $('#alert').show();
+              //  window.location = '/'
              },
              cache: false,
              contentType: false,
