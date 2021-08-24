@@ -123,6 +123,10 @@ cursor: pointer;
 
 
   @media (max-width:411px) {
+    .social-icon a{
+      display: block;
+    }
+    
     .nav-left img {
       width: 150px;
       height: 20px;

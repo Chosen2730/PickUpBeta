@@ -56,10 +56,11 @@ li{
   background-color: #1e011f;
 }
 .top-div h5{
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 2%;
+  /* padding-top: 2%; */
+  margin-right: 10px;
+}
+.link{
+  display: flex;
 }
 
 .top-div h5, a {
